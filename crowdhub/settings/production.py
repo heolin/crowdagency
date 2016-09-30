@@ -11,9 +11,9 @@ DATABASES = {
     }
 }
 
-
 # Setup mongo connection
-#MONGO_DATABASE_NAME = 'crowdhub_data'
-#from mongoengine import connect
-#DEFAULT_CONNECTION_NAME = connect(MONGO_DATABASE_NAME)
+MONGO_DATABASE_NAME = 'crowdhub_data'
+from mongoengine import connect
+DEFAULT_CONNECTION_NAME = connect(MONGO_DATABASE_NAME,
+                                  host="mongodb://heolin123:Password321@ds033337.mongolab.com:33337/crowdhub")
 
