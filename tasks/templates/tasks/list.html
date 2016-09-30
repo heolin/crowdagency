@@ -1,0 +1,15 @@
+{% extends "crowdhub/base.html" %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'tasks/css/style.css' %}" />
+
+<script src="{% static 'tasks/js/services.js' %}"></script>
+<script src="{% static 'tasks/js/controller.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div ng-app="crowdhub" ng-controller="tasksCtrl">
+</div>
+
+{% endblock %}
