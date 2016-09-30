@@ -1,5 +1,5 @@
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+from crowdhub.settings.base import *
+from crowdhub.settings.auth import *
 
 DATABASES = {
     'default': {

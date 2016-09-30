@@ -1,7 +1,7 @@
 app.controller('myCtrl', function($scope, API) {
-    var CLIENT_ID = 4;
-    var TASK_ID = 31;
-    var CLICK_ITEM_ID = "57bb6af794b68f10de6b054c";
+    var CLIENT_ID = 2;
+    var TASK_ID = 2;
+    var CLICK_ITEM_ID = "57eed2ea94b68f1f06b7ccd5";
 
     $scope.ClientData = API.ClientsDetail.detail({clientId:CLIENT_ID});
     $scope.item = API.ItemDetail.detail({taskId:TASK_ID, itemId:CLICK_ITEM_ID});

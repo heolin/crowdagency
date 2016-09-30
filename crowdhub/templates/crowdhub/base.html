@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'crowdhub/base_head.html' %}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        {% include 'crowdhub/header.html' %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

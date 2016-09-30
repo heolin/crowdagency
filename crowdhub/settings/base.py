@@ -44,11 +44,11 @@ EXTERNAL_APPS = [
 
 PROJECT_APPS = [
     'crowdhub',
+    'tasks',
+    'users',
+    'permissions',
+    'clients',
 ]
-#'tasks',
-#'users',
-#'permissions',
-#'clients',
 
 INSTALLED_APPS = EXTERNAL_APPS + PROJECT_APPS
 
@@ -67,7 +67,7 @@ MIDDLEWARE_CLASSES = [
 
 # Media
 
-MEDIA_ROOT = "/home/heolin123/programming/python/crowdhub/media"
+MEDIA_ROOT = "/home/heolin123/crowdhub/media"
 MEDIA_URL = '/media/'
 
 
