@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'users/profile', views.profile),
 
     url(r'api/users/$', api.UserList.as_view()),
+    url(r'api/users/authtoken$', api.AuthTokenDetail.as_view()),
     url(r'api/users/current', api.UserCurrentDetail.as_view()),
     url(r'api/users/(?P<pk>[0-9]+)$', api.UserDetail.as_view()),
 ]

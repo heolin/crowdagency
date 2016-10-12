@@ -40,6 +40,7 @@ EXTERNAL_APPS = [
 
     'rest_framework',
     'rest_framework_mongoengine',
+    'rest_framework.authtoken',
 ]
 
 PROJECT_APPS = [

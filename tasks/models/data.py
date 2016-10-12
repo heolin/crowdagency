@@ -12,6 +12,7 @@ ANNOTATIONS_COLLECTION = "{0}_annotations"
 class Annotation(Document):
     item = ReferenceField('Item')
     user_id = IntField()
+    session_id = IntField()
     data = DictField()
 
     def deletethis(self):
