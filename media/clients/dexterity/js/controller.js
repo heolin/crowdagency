@@ -24,4 +24,9 @@ app.controller('myCtrl', function($scope, API) {
         API.ItemAnnotationDetail.update({taskId:TASK_ID, itemId:CLICK_ITEM_ID}, "{\"data\":{}}")
         $scope.getAnnotations();
     }
+
+    $scope.sendData = function(data) {
+        output = "{\"data\":"+data+"}";
+        API.ItemAnnotationDetail.update({taskId:TASK_ID, itemId:CLICK_ITEM_ID}, output);
+    }
 })

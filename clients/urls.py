@@ -8,4 +8,5 @@ urlpatterns = [
 
     url(r'clients/$', views.list),
     url(r'clients/(?P<client_id>[0-9]+)$', views.view),
+    url(r'clients/(?P<client_id>[0-9]+)/survey$', views.survey),
 ]

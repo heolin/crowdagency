@@ -16,3 +16,8 @@ def view(request, client_id):
 
     return render(request, 'clients/view.html', {'client_id':client_id, 'client_index_path':client_index_path, 'is_embeded':is_embeded})
 
+
+def survey(request, client_id):
+    """Display a survey certain client"""
+    client = Client.objects.get(id=client_id)
+    return render(request, 'clients/survey.html', {'client_id':client_id})
