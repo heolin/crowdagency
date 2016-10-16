@@ -1,6 +1,8 @@
 mongoengine
+django-angular
 djangorestframework
 django-rest-framework-mongoengine
 django-filter
 djangorestframework-filters
 django-crispy-forms
+django-lazysignup

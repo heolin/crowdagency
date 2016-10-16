@@ -10,19 +10,50 @@
 {% block content %}
 
 <div ng-app="crowdhub" ng-controller="clientsCtrl">
-    <div class="col-md-offset-1 col-md-10">
-        <div class="card">
+    <div class="col-md-offset-4 col-md-4">
+        <div class="survey-card card shadow">
             <div class="content">
                 <div class="row">
-                    Ankieta
-                </div>
-                <div class="footer">
-                    <a href="/clients"><div class='btn btn-primary'>Back</div></a>
+                    <div class="survey-header">
+                        Ankieta
+                    </div>
+                    <div class="survey-info">
+                        Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki
+                    </div>
+                    <div class="survey-content">
+                        <form id="surveyForm" action="{% url 'clients:survey' client_id %}" method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="fieldWrapper">
+                                    {{ field.label_tag }} {{ field }}
+                                    <div class="fg-danger">{{ field.errors }}</div>
+                                    {% if field.help_text %}
+                                    <p class="help">{{ field.help_text|safe }}</p>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                            <div onclick="submitForm()" class="pull-right btn btn-fill btn-success">Wyślij</div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+window.not_saved_survey = true;
 
+function submitForm() {
+    window.not_saved_survey = false;
+    $("#surveyForm").submit();
+}
+
+$(window).bind('beforeunload', function(){
+    if (window.not_saved_survey) {
+        event.returnValue = "Proszę o wypełnienie ankiety przed zamknięciem tej strony";
+        return "Proszę o wypełnienie ankiety przed zamknięciem tej strony";
+    }
+});
+</script>
 
 {% endblock %}

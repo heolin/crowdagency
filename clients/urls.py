@@ -2,11 +2,10 @@ from django.conf.urls import url
 
 from clients import views, api
 
-urlpatterns = [
-    url(r'api/clients/$', api.ClientList.as_view()),
-    url(r'api/clients/(?P<pk>[0-9]+)$', api.ClientDetail.as_view()),
 
-    url(r'clients/$', views.list),
-    url(r'clients/(?P<client_id>[0-9]+)$', views.view),
-    url(r'clients/(?P<client_id>[0-9]+)/survey$', views.survey),
+urlpatterns = [
+    url(r'^$', views.list, name="list"),
+    url(r'clients/$', views.list, name="list"),
+    url(r'clients/(?P<client_id>[0-9]+)$', views.view, name="view"),
+    url(r'clients/(?P<client_id>[0-9]+)/survey$', views.survey, name="survey"),
 ]

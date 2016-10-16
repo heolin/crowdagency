@@ -38,6 +38,8 @@ EXTERNAL_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'djng',
+    'lazysignup',
     'rest_framework',
     'rest_framework_mongoengine',
     'rest_framework.authtoken',
@@ -96,6 +98,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'crowdhub.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+  'django.contrib.auth.backends.ModelBackend',
+  'lazysignup.backends.LazySignupBackend',
+)
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

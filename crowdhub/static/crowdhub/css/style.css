@@ -1,3 +1,36 @@
+.navbar-default {
+    background-color: #89a2a0;
+    border-bottom: 0px;
+    color: #f4f3ef;
+}
 body {
-    background-color: #e3e3e8;
+    background-color: #f4f3ef;
+}
+
+.bg-white {
+    background-color: #f4f3ef;
+}
+
+.fg-light {
+    color: #f4f3ef !important;
+}
+
+.fg-danger {
+    color: #EB5E28 !important;
+}
+
+.shadow {
+    -webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.28);
+    -moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.28);
+    box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.28);
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    pointer-events: none;
 }

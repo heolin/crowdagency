@@ -25,7 +25,7 @@ class ItemSerializer(EmbeddedDocumentSerializer):
 class AnnotationSerializer(EmbeddedDocumentSerializer):
     class Meta:
         model = Annotation
-        fields = ('id', 'data', 'user_id')
-        read_only_fields = ('user_id',)
+        fields = ('id', 'data', 'user_id', 'timestamp', 'session_id')
+        read_only_fields = ('user_id', 'timestamp', 'session_id')
 
 

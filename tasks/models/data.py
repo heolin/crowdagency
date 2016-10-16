@@ -1,7 +1,9 @@
 from mongoengine.context_managers import switch_collection
 
 from mongoengine import Document
-from mongoengine.fields import IntField, DictField, ListField, StringField, ReferenceField
+from mongoengine.fields import IntField, DictField, ListField, StringField, ReferenceField, DateTimeField
+
+from datetime import datetime
 
 import tasks
 
@@ -13,6 +15,7 @@ class Annotation(Document):
     item = ReferenceField('Item')
     user_id = IntField()
     session_id = IntField()
+    timestamp = DateTimeField(default=datetime.now)
     data = DictField()
 
     def deletethis(self):

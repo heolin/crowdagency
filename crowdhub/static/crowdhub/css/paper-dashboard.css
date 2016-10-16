@@ -967,7 +967,6 @@ hr {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_inputs\.scss}line{font-family:\0000314}}
 .form-control {
   background-color: #fffcf5;
-  border: medium none;
   border-radius: 4px;
   color: #66615b;
   font-size: 14px;
@@ -1744,8 +1743,6 @@ textarea.form-control {
   .card .category,
   .card label {
     font-size: 14px;
-    font-weight: 400;
-    color: #9A9A9A;
     margin-bottom: 0px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\0000345}}
     .card .category i,

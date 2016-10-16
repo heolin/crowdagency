@@ -10,8 +10,8 @@
 {% block content %}
 
 <div ng-app="crowdhub" ng-controller="clientsCtrl">
-    <div class="col-md-offset-1 col-md-10">
-        <div class="card">
+    <div class="col-md-12">
+        <div class="card unity-card shadow">
             <div class="content">
                 <div class="row">
                     {% if is_embeded %}
@@ -19,9 +19,6 @@
                     {% else %}
                     <iframe class="game-holder" src="/media/{{client_index_path}}"></iframe>
                     {% endif %}
-                </div>
-                <div class="footer">
-                    <a href="/clients"><div class='btn btn-primary'>Back</div></a>
                 </div>
             </div>
         </div>
