@@ -9,6 +9,7 @@ from crowdhub.api import BaseView, BaseListView, BaseDetailView, BaseCreateListV
 from crowdhub.api import filter_get
 
 from utils.helpers import is_json, load_json
+from ipware.ip import get_ip
 
 
 #Protocol
@@ -124,6 +125,7 @@ class ItemAnnotationList(BaseCreateListView):
         if "id" in request.data:
             values['id'] = request.data['id']
         annotation = Annotation(**values)
+        annotation.ip_address = get_ip(request)
 
         result_annotation, created = item.add_annotation(annotation, request.user.id)
         if result_annotation:

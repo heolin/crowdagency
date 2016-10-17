@@ -17,6 +17,7 @@ class Annotation(Document):
     session_id = IntField()
     timestamp = DateTimeField(default=datetime.now)
     data = DictField()
+    ip_address = StringField(default="")
 
     def deletethis(self):
         collection_name = ANNOTATIONS_COLLECTION.format(self.item.task.items_collection_name)

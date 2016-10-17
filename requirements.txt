@@ -1,6 +1,7 @@
 mongoengine
 django-angular
 djangorestframework
+django-ipware
 django-rest-framework-mongoengine
 django-filter
 djangorestframework-filters
